@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 
-import { NopagesfoundComponent } from './pages/nopagesfound/nopagesfound.component';
+import { NopagesfoundComponent } from './nopagesfound/nopagesfound.component';
 import { LoginComponent } from './auth/login/login.component';
 import { RegisterComponent } from './auth/register/register.component';
 import { HeaderComponent } from './shared/header/header.component';
@@ -19,26 +19,29 @@ import { DashboardComponent } from './pages/dashboard/dashboard.component';
 import { CatalogueComponent } from './pages/catalogue/catalogue.component';
 import { PagesComponent } from './pages/pages.component';
 import { ProductComponent } from './pages/product/product.component';
+import { PagesModule } from './pages/pages.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DashboardComponent,
+   // DashboardComponent,
     NopagesfoundComponent,
-    LoginComponent,
+    //LoginComponent,
     RegisterComponent,
     HeaderComponent,
     FooterComponent,
     SidebarComponent,
     BreadcrumbsComponent,
-    ProductComponent,
-    CatalogueComponent,
-    PagesComponent
+    //ProductComponent,
+    //CatalogueComponent,
+    //PagesComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    
+    PagesModule,
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]

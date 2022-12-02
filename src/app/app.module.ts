@@ -20,6 +20,7 @@ import { CatalogueComponent } from './pages/catalogue/catalogue.component';
 import { PagesComponent } from './pages/pages.component';
 import { ProductComponent } from './pages/product/product.component';
 import { PagesModule } from './pages/pages.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -40,6 +41,7 @@ import { PagesModule } from './pages/pages.module';
     BrowserModule,
     AppRoutingModule,
     PagesModule,
+    HttpClientModule,
 
 
   ],

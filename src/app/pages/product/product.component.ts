@@ -65,7 +65,7 @@ export class ProductComponent implements OnInit {
 
 
      }
-     const url="https://api.escuelajs.co/api/v1/products"
+     const url="https://api.escuelajs.co/api/v1/products/65"
      this.httpclient.put(url,data).subscribe (
        response => {
          console.log(response);
@@ -75,5 +75,15 @@ export class ProductComponent implements OnInit {
 
      //taller con put señalar el mnombre y revisas en la url
    }
+
+
+   deleteProduct(){
+    const url="https://api.escuelajs.co/api/v1/products/65"
+    this.httpclient.delete(url).subscribe (
+      response => {
+        console.log(response);
+      }
+    );
+  }
 
 }

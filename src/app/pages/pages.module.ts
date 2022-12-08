@@ -9,6 +9,7 @@ import { SharedModule } from '../shared/shared.module';
 import { RouterModule } from '@angular/router';
 import { AuthModule } from '../auth/auth.module';
 import { LoginComponent } from '../auth/login/login.component';
+import { PagesRoutingModule } from './pages-routing.module';
 
 
 
@@ -33,6 +34,7 @@ import { LoginComponent } from '../auth/login/login.component';
     SharedModule,
     RouterModule,
     AuthModule,
+    PagesRoutingModule,
 
   ]
 })

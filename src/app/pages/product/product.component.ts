@@ -11,10 +11,10 @@ export class ProductComponent implements OnInit {
   constructor(private httpclient:HttpClient) { }
 
   ngOnInit(): void {
-    //this.getProducts();
-    //this.getProduct();
+    // this.getProducts();
+    this.getProduct();
     //this.createProduct();
-    this.updateProduct();
+    // this.updateProduct();
 
   }
 

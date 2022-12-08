@@ -9,6 +9,11 @@ import { SharedModule } from '../shared/shared.module';
 import { RouterModule } from '@angular/router';
 import { AuthModule } from '../auth/auth.module';
 import { LoginComponent } from '../auth/login/login.component';
+import { PagesRoutingModule } from './pages-routing.module';
+import { HeaderComponent } from '../shared/header/header.component';
+import { SidebarComponent } from '../shared/sidebar/sidebar.component';
+import { BreadcrumbsComponent } from '../shared/breadcrumbs/breadcrumbs.component';
+import { FooterComponent } from '../shared/footer/footer.component';
 
 
 
@@ -18,14 +23,17 @@ import { LoginComponent } from '../auth/login/login.component';
     ProductComponent,
     CatalogueComponent,
     LoginComponent,
-    PagesComponent
+    PagesComponent,
+    HeaderComponent,
+    SidebarComponent,
+    BreadcrumbsComponent,
+    FooterComponent,
   ],
   exports:[
-    DashboardComponent,
-    ProductComponent,
-    CatalogueComponent,
-    LoginComponent,
-    PagesComponent
+    // DashboardComponent,
+    // ProductComponent,
+    // CatalogueComponent,
+    // PagesComponent
 
   ],
   imports: [
@@ -33,6 +41,7 @@ import { LoginComponent } from '../auth/login/login.component';
     SharedModule,
     RouterModule,
     AuthModule,
+    PagesRoutingModule,
 
   ]
 })

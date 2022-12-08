@@ -14,8 +14,8 @@ children:[
   { path: 'dashboard', component: DashboardComponent },
   { path: 'product', component: ProductComponent },
   { path: 'catalogue', component: CatalogueComponent },
- 
-  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+
+  
 
 ],
 }

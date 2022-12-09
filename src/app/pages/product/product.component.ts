@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient} from '@angular/common/http'
+import { ProductHttpService } from '../../services/product-http.service';
 
 @Component({
   selector: 'app-product',
@@ -8,11 +8,11 @@ import { HttpClient} from '@angular/common/http'
 })
 export class ProductComponent implements OnInit {
 
-  constructor(private httpclient:HttpClient) { }
+  constructor(private ProductHttpService: ProductHttpService) { }
 
   ngOnInit(): void {
      //this.getProducts();
-    this.getProduct();
+    //this.getProduct();
     //this.createProduct();
     // this.updateProduct();
     //this.deleteProduct();
@@ -20,22 +20,22 @@ export class ProductComponent implements OnInit {
   }
 
   getProducts(){
-    this.httpclient.get("https://api.escuelajs.co/api/v1/products").subscribe (
+    this.ProductHttpService.getAll().subscribe (
       response => {
         console.log(response);
       }
     ) ;
   }
 
-  getProduct(){
-    this.httpclient.get("https://api.escuelajs.co/api/v1/products/339").subscribe (
+  getOne(){
+    this.ProductHttpService.getOne(1).subscribe (
       response => {
         console.log(response);
       }
     );
   }
 
-  createProduct(){
+  create(){
    const data = {
 
       title:'ollitas',
@@ -45,8 +45,8 @@ export class ProductComponent implements OnInit {
       categoryId:1,
 
     }
-    const url="https://api.escuelajs.co/api/v1/products"
-    this.httpclient.post(url,data).subscribe (
+    
+    this.ProductHttpService.create().subscribe (
       response => {
         console.log(response);
       }
@@ -57,7 +57,7 @@ export class ProductComponent implements OnInit {
   }
 
 
-  updateProduct(){
+  update(){
     const data = {
 
        title:'neverita',
@@ -66,8 +66,8 @@ export class ProductComponent implements OnInit {
 
 
      }
-     const url="https://api.escuelajs.co/api/v1/products/65"
-     this.httpclient.put(url,data).subscribe (
+    
+     this.ProductHttpService.update(1).suscribe (
        response => {
          console.log(response);
        }
@@ -78,9 +78,9 @@ export class ProductComponent implements OnInit {
    }
 
 
-   deleteProduct(){
-    const url="https://api.escuelajs.co/api/v1/products/339"
-    this.httpclient.delete(url).subscribe (
+   destroy(){
+    
+    this.ProductHttpService.destroy(2).subscribe (
       response => {
         console.log(response);
       }

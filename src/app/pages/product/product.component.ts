@@ -11,11 +11,11 @@ export class ProductComponent implements OnInit {
   constructor(private httpclient:HttpClient) { }
 
   ngOnInit(): void {
-     //this.getProducts();
-    this.getProduct();
+    // this.getProducts();
+   //this.getProduct();
     //this.createProduct();
-    // this.updateProduct();
-    //this.deleteProduct();
+     //this.updateProduct();
+    this.deleteProduct();
 
   }
 
@@ -28,7 +28,7 @@ export class ProductComponent implements OnInit {
   }
 
   getProduct(){
-    this.httpclient.get("https://api.escuelajs.co/api/v1/products/339").subscribe (
+    this.httpclient.get("https://api.escuelajs.co/api/v1/products/201").subscribe (
       response => {
         console.log(response);
       }
@@ -38,9 +38,9 @@ export class ProductComponent implements OnInit {
   createProduct(){
    const data = {
 
-      title:'ollitas',
+      title:'santiago-guallichico',
       price:50,
-      description:'ollitas de dama-nombre',
+      description:'santiago-guallichico 5to VA',
       images:[],
       categoryId:1,
 
@@ -60,13 +60,13 @@ export class ProductComponent implements OnInit {
   updateProduct(){
     const data = {
 
-       title:'neverita',
+       title:'santiago-david',
        price:3,
-       description:'calzado de dama-nombre',
+       description:'nombre-estudiante-',
 
 
      }
-     const url="https://api.escuelajs.co/api/v1/products/65"
+     const url="https://api.escuelajs.co/api/v1/products/201"
      this.httpclient.put(url,data).subscribe (
        response => {
          console.log(response);
@@ -79,7 +79,7 @@ export class ProductComponent implements OnInit {
 
 
    deleteProduct(){
-    const url="https://api.escuelajs.co/api/v1/products/339"
+    const url="https://api.escuelajs.co/api/v1/products/201"
     this.httpclient.delete(url).subscribe (
       response => {
         console.log(response);

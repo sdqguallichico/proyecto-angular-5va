@@ -1,12 +1,12 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { ProductModel, CreateProduct, UpdateProduct } from '../models/product.model';
+import { CreateProduct, UpdateProduct } from '../models/product.model';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductHttpService {
-   
+
   readonly api_url:string = 'https://api.escuelajs.co/api/v1/products'
   constructor(private httpclient:HttpClient) { }
 
@@ -16,7 +16,7 @@ export class ProductHttpService {
   }
 
   getOne(id:number){
-    const url = `${this.api_url}/${id}`
+    const url = `${this.api_url}/${id}`;
     return this.httpclient.get(url);
   }
 
@@ -46,10 +46,12 @@ export class ProductHttpService {
        description:'calzado de dama-nombre',
 
 
-     }
-     const url = `${this.api_url}/${id}`
-     
-     this.httpclient.put(url,data);
+
+      }
+      const url = "http://api.escuelajs.co/api/v1/products/5";
+
+
+     return this.httpclient.put(url,data);
 
 
      //taller con put señalar el mnombre y revisas en la url
@@ -59,7 +61,7 @@ export class ProductHttpService {
    destroy(id:number){
     const url = `${this.api_url}/${id}`
 
- 
+
     return this.httpclient.delete(url);
   }
 

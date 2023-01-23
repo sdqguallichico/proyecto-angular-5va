@@ -3,3 +3,56 @@
 <h2>Santiago Guallichico</h2>
 <h3>Desarrollo de software</h3>
 <h4>5to Vespertino A </h4>
+
+<div class="card">
+  <div class="card-header">
+      Producto
+  </div>
+  <div class="mb-3">
+    <label for="title" class="form-label">Producto:</label>
+    <input type="text" id="title" [value]="selectedProduct.title" class="form-control">
+    <br>
+    <label for="title" class="form-label">Precio:</label>
+    <input type="text" id="title" [value]="selectedProduct.price" class="form-control">
+    <br>
+    <label for="title" class="form-label">Descripcion</label>
+    <textarea name="" id="description"  class="form-control" cols="30" rows="10">{{selectedProduct.description}}</textarea>
+
+      <button class="btn btn-success" (click)="updateProduct">holi</button>
+  </div>
+  <br>
+  <div class="card-footer text-muted">
+      Footer
+  </div>
+</div>
+<hr>
+<div class="table-responsive">
+  <table class="table table-primary">
+      <thead>
+          <tr>
+              <th scope="col">Producto</th>
+              <th scope="col">Precio</th>
+              <th scope="col">Descripción</th>
+              <th scope="col">Imagen</th>
+              <th scope="col">Eliminar</th>
+              <th scope="col">Actualizar</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr class="" *ngFor="let product of products">
+              <td>{{product.title}}</td>
+              <td>{{product.price}}</td>
+              <td>{{product.description}}</td>
+              <td>{{product.category}}</td>
+              <td><img src="{{product.images}}" alt="" width="150px" height="200px">
+                
+              <td><button (click)="deleteProduct(product.id)" >Eliminar</button></td>
+              <td><button (click)="editProduct(product)" >Editar</button></td>
+
+          </tr>
+      </tbody>
+  </table>
+</div>
+
+
+

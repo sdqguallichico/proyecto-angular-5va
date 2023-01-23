@@ -21,6 +21,7 @@ import { PagesComponent } from './pages/pages.component';
 import { ProductComponent } from './pages/product/product.component';
 import { PagesModule } from './pages/pages.module';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     PagesModule,
     HttpClientModule,
+    FormsModule,
 
 
   ],

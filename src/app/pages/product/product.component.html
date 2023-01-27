@@ -1,4 +1,3 @@
-<p>product works!</p>
 <h1>Intituto Superior Tecnologico de Turismo y Patrimonio Yavirac </h1>
 <h2>Santiago Guallichico</h2>
 <h3>Desarrollo de software</h3>
@@ -18,7 +17,7 @@
     <label for="title" class="form-label">Descripcion</label>
     <textarea name="" id="description"  class="form-control" cols="30" rows="10">{{selectedProduct.description}}</textarea>
 
-      <button class="btn btn-success" (click)="updateProduct">holi</button>
+      <button class="btn btn-success" (click)="updateProduct">Guardar</button>
   </div>
   <br>
   <div class="card-footer text-muted">
@@ -43,16 +42,31 @@
               <td>{{product.title}}</td>
               <td>{{product.price}}</td>
               <td>{{product.description}}</td>
-              <td>{{product.category}}</td>
+
               <td><img src="{{product.images}}" alt="" width="150px" height="200px">
-                
-              <td><button (click)="deleteProduct(product.id)" >Eliminar</button></td>
-              <td><button (click)="editProduct(product)" >Editar</button></td>
+
+              <td> <label for="my-modal-6" class="btn glass modal-button  btn-outline  btn-secondary  btn-sm">Eliminar</label></td>
+
+              <div class="modal modal-bottom sm:modal-middle">
+                <div class="modal-box">
+                  <h2 class="font-bold text-lg">Advertenca!</h2>
+                  <h3 class="font-bold text-lg">Esta seguro de eliminar este registro!</h3>
+                  <p class="py-4">no se podran revertir los cambios!</p>
+                  <div class="modal-action">
+                    <label for="my-modal-6" class="btn btn-outline btn-warning" (click)="deleteProduct(product.id)">confirmar!</label>
+                    <label for="my-modal-6" class="btn btn-ghost">Cancelar!</label>
+                  </div>
+                </div>
+              </div>
+
+              <td><button (click)="editProduct(product)" >editar</button></td>
 
           </tr>
       </tbody>
   </table>
 </div>
+
+
 
 
 

@@ -71,7 +71,7 @@ export class ProductComponent implements OnInit {
       });
     }
     deleteProduct(id: ProductModel['id']) {
-      if(window.confirm("Desea Borrar el registro"))
+      if(window.confirm("Desea Borrar el registro!!"))
       this.productHttpService.destroy(id).subscribe(
         response => {
           this.products = this.products.filter(product => product.id != id );

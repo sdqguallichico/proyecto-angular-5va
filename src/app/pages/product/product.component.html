@@ -45,21 +45,30 @@
 
               <td><img src="{{product.images}}" alt="" width="150px" height="200px">
 
-              <td> <label for="my-modal-6" class="btn glass modal-button  btn-outline  btn-secondary  btn-sm">Eliminar</label></td>
+              <td><label for="my-modal-6" class="btn glass modal-button  btn-outline  btn-error  btn-sm">Eliminar</label>
 
-              <div class="modal modal-bottom sm:modal-middle">
-                <div class="modal-box">
-                  <h2 class="font-bold text-lg">Advertenca!</h2>
-                  <h3 class="font-bold text-lg">Esta seguro de eliminar este registro!</h3>
-                  <p class="py-4">no se podran revertir los cambios!</p>
-                  <div class="modal-action">
-                    <label for="my-modal-6" class="btn btn-outline btn-warning" (click)="deleteProduct(product.id)">confirmar!</label>
-                    <label for="my-modal-6" class="btn btn-ghost">Cancelar!</label>
-                  </div>
-                </div>
-              </div>
+                      <input type="checkbox" id="my-modal-6" class="modal-toggle" />
+                      <div class="modal modal-bottom sm:modal-middle">
+                        <div class="modal-box">
+                          <h2 class="font-bold text-lg">Advertencia!</h2>
+                          <h3 class="font-bold text-lg">Está seguro de eliminar este registro?</h3>
+                          <p class="py-4">No se podrán revertir los cambios!</p>
+                          <div class="modal-action">
+                            <label for="my-modal-6" class="btn btn-outline btn-error" (click)="deleteProduct(product.id)">Confirmar!</label>
+                            <label for="my-modal-6" class="btn btn-ghost">Cancelar!</label>
+                          </div>
+                        </div>
+                      </div>
 
-              <td><button (click)="editProduct(product)" >editar</button></td>
+
+
+
+
+              </td>
+
+
+
+              <td><button class="btn btn-outline btn-info btn-sm" (click)="editProduct(product)" >editar</button></td>
 
           </tr>
       </tbody>

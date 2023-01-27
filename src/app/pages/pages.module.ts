@@ -13,13 +13,15 @@ import { PagesRoutingModule } from './pages-routing.module';
 
 
 
+
 @NgModule({
   declarations: [
     DashboardComponent,
     ProductComponent,
     CatalogueComponent,
     LoginComponent,
-    PagesComponent
+    PagesComponent,
+
   ],
   exports:[
     DashboardComponent,
